@@ -1,0 +1,27 @@
+.controls-bar {
+  animation: fade-in 0.1s ease-in 0.2s forwards;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-v-5);
+  opacity: 0;
+  padding: 0 var(--spacing-h-7);
+}
+
+.controls-bar__search-form {
+  padding: 0 var(--spacing-h-7);
+}
+
+.controls-bar__sort-select {
+  padding: 0 var(--spacing-h-7);
+  border-left: 1px solid #9d1d2a;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

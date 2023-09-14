@@ -1,0 +1,74 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "foo rick and morty - 2023"
+    }
+  ],
+
+  "settings": {
+    "typescript.validate.enable": true,
+    "javascript.validate.enable": true,
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "editor.formatOnSave": true,
+    "prettier.configPath": ".prettierrc",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "folderTemplates.structures": [
+      {
+        "omitParentDirectory": true,
+        "structure": [
+          {
+            "fileName": "<FTName>/index.ts",
+            "template": "Index export"
+          },
+          {
+            "fileName": "<FTName>/<FTName>.tsx",
+            "template": "React TS component"
+          },
+          {
+            "fileName": "<FTName>/<FTName>.types.ts",
+            "template": "Types file"
+          },
+          {
+            "fileName": "<FTName>/<FTName>.css",
+            "template": "Styles file"
+          }
+        ]
+      }
+    ],
+    "folderTemplates.fileTemplates": {
+      "Index export": [
+        "export { default } from './<FTName>'",
+        "export type { <FTName | pascalcase>Props } from './<FTName>.types'"
+      ],
+      "React TS component": [
+        "import type { <FTName | pascalcase>Props } from './<FTName>.types';",
+        "",
+        "import './<FTName>.css';",
+        "",
+        "export default function <FTName | pascalcase>({} : <FTName | pascalcase>Props) {",
+        "  return <div className='<FTName>'><FTName></div>;",
+        "}"
+      ],
+      "Types file": ["export interface <FTName | pascalcase>Props {}"],
+      "Styles file": [".<FTName> {", "}"]
+    },
+
+    "files.exclude": {
+      "**/node_modules": true
+    },
+
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "pnpm-lock.yaml": true
+    }
+  }
+}

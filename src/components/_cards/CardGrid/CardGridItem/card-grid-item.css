@@ -1,0 +1,9 @@
+.card-grid-item {
+  display: flex;
+  transition: all 0.2s ease-out;
+}
+
+.card-grid-item:hover {
+  scale: 1.05;
+  transition: all 0.2s ease-in;
+}

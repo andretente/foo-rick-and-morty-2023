@@ -1,0 +1,14 @@
+.base-image {
+  object-fit: cover;
+  width: 100%;
+}
+
+.base-image__no-image-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.base-image__no-image {
+  stroke: rgb(189, 189, 189);
+}

@@ -1,0 +1,13 @@
+.background-image {
+  display: inline-block;
+  height: 100vh;
+  left: 0;
+  margin: 0;
+  object-fit: cover;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 100vw;
+  z-index: -1;
+}

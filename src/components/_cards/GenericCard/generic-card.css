@@ -1,0 +1,24 @@
+.generic-card {
+  align-items: center;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  box-shadow: 5px 6px 5px 3px rgb(56 54 54 / 10%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-height: 280px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.generic-card__image {
+  object-fit: cover;
+  width: 100%;
+}
+
+.generic-card__content-title {
+  font-size: 1rem;
+  padding: 0 var(--spacing-h-4);
+  margin: var(--spacing-v-4);
+}

@@ -1,0 +1,25 @@
+.message-loader {
+  animation: fade-in 0.2s ease-in 0.3s forwards;
+  padding: var(--spacing-v-12) var(--spacing-h-9);
+  opacity: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.message-loader__title {
+  font-size: 1.5rem;
+}
+
+.message-loader__icon {
+  width: 50px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

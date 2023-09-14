@@ -1,0 +1,12 @@
+.error-message {
+  padding: var(--spacing-v-12) var(--spacing-h-9);
+  text-align: center;
+}
+
+.error-message__title {
+  font-size: 1.5rem;
+}
+
+.error-message__icon {
+  width: 50px;
+}
