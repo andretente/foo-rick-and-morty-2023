@@ -1,0 +1,14 @@
+.root {
+  display: inline-block;
+  height: min(400px, 100vh);
+  left: 50%;
+  margin: 0;
+  object-fit: cover;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  transition: opacity 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+  width: min(400px, 100vw);
+  /* z-index: -1; */
+}

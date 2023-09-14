@@ -1,4 +1,4 @@
-.message-loader {
+.root {
   animation: fade-in 0.2s ease-in 0.3s forwards;
   padding: var(--spacing-v-12) var(--spacing-h-9);
   opacity: 0;
@@ -6,12 +6,13 @@
   width: 100%;
 }
 
-.message-loader__title {
+.title {
   font-size: 1.5rem;
 }
 
-.message-loader__icon {
-  width: 50px;
+.loader {
+  width: 60px;
+  opacity: 0.7;
 }
 
 @keyframes fade-in {

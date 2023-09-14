@@ -1,9 +1,8 @@
-import './controls-bar.css'
-
 import SearchForm from '@components/_inputs/SearchForm'
 import SortSelect from '@components/_inputs/SortSelect'
 
-import type { ControlsBarProps } from './ControlsBar.types'
+import css from './controls-bar.module.css'
+import type { ControlsBarProps } from './controls-bar.types'
 
 export default function ControlsBar({
   onChangeSearch,
@@ -11,17 +10,14 @@ export default function ControlsBar({
   onChangeSort,
 }: ControlsBarProps) {
   return (
-    <div className="controls-bar">
+    <div className={css['root']}>
       <SearchForm
-        className="controls-bar__search-form"
+        className={css['search-form']}
         onChange={onChangeSearch}
         onSubmit={onSubmitSearch}
       />
 
-      <SortSelect
-        className="controls-bar__sort-select"
-        onChange={onChangeSort}
-      />
+      <SortSelect className={css['sort-select']} onChange={onChangeSort} />
     </div>
   )
 }

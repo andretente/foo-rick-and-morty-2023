@@ -6,9 +6,7 @@ import {
 } from 'react-router-dom'
 
 import Characters from './routes/characters'
-// import Character, {
-//   characterLoader,
-// } from './routes/characters/routes/Character'
+import Character from './routes/characters/routes/character'
 // import Episodes, { episodesLoader } from './routes/Episodes'
 import Error from './routes/Error'
 import Layout from './routes/layout'
@@ -22,11 +20,7 @@ function App() {
           <Route path="/" element={<Layout />} errorElement={<Error />}>
             <Route path="characters">
               <Route index element={<Characters />} />
-              {/* <Route
-                path=":characterId"
-                element={<Character />}
-                loader={characterLoader}
-              /> */}
+              <Route path=":characterId" element={<Character />} />
             </Route>
 
             {/* <Route

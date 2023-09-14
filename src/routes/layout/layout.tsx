@@ -1,4 +1,4 @@
-// import BackgroundImage from '@components/_images/BackgroundImage'
+import BackgroundImage from '@components/_images/background-image'
 import clsx from 'clsx'
 // import { useLayoutEffect, useRef } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
@@ -55,9 +55,14 @@ export default function Layout() {
         </nav>
       </header>
 
-      {/* <BackgroundImage /> */}
+      <BackgroundImage />
 
-      <main className={css['main']}>
+      <main
+        className={clsx(
+          css['main'],
+          location.pathname === '/' && css['main--is-home']
+        )}
+      >
         <Outlet />
       </main>
     </>
