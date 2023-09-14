@@ -1,29 +1,28 @@
-.character__card {
+.root {
   animation: fade-in 0.2s ease-in forwards;
   background-color: #222322;
-  border: 1px solid #242524;
+  border: 1px solid lawngreen;
   border-radius: 4px;
-  box-shadow: 5px 6px 5px 3px rgb(56 54 54 / 10%);
   height: fit-content;
   margin: 0 auto;
   padding: var(--spacing-v-6) var(--spacing-h-8);
   width: fit-content;
 }
 
-.character__title {
+.title {
   animation: fade-in 0.1s ease-in 0.2s forwards;
   margin: var(--spacing-v-4) var(--spacing-h-4);
   opacity: 0;
 }
 
-.character__image {
+.image {
   animation: fade-in 0.1s ease-in 0.3s forwards;
   border-radius: 4px;
   opacity: 0;
   width: auto;
 }
 
-.character__details-list {
+.details-list {
   animation: fade-in 0.1s ease-in 0.4s forwards;
   display: flex;
   flex-direction: column;
