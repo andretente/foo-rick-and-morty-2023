@@ -1,7 +1,7 @@
 .root {
   animation: fade-in 0.2s ease-in forwards;
   background-color: #222322;
-  border: 1px solid lawngreen;
+  border: 1px solid #9d1d2a;
   border-radius: 4px;
   height: fit-content;
   margin: 0 auto;

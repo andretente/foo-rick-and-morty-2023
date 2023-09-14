@@ -1,7 +1,7 @@
 .generic-card {
   align-items: center;
   background-color: #1c1c1c;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 5px 6px 5px 3px rgb(56 54 54 / 10%);
   color: #fff;
   display: flex;
