@@ -1,0 +1,15 @@
+[data-debug] {
+  outline: 2px dashed hsl(86deg 100% 51%);
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

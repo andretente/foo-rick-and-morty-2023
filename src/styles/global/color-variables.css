@@ -1,0 +1,67 @@
+:root {
+  --ruby-1: hsl(348, 100%, 99.5%);
+  --ruby-2: hsl(345, 100%, 98.4%);
+  --ruby-3: hsl(345, 89.9%, 96.7%);
+  --ruby-4: hsl(346, 82.6%, 94.4%);
+  --ruby-5: hsl(346, 75.8%, 91.4%);
+  --ruby-6: hsl(347, 69.3%, 87.1%);
+  --ruby-7: hsl(348, 64.3%, 80.9%);
+  --ruby-8: hsl(348, 61.5%, 73.5%);
+  --ruby-9: hsl(348, 75%, 58.5%);
+  --ruby-10: hsl(347, 68.6%, 54.1%);
+  --ruby-11: hsl(345, 70%, 46.5%);
+  --ruby-12: hsl(344, 63%, 24%);
+
+  --mauve-1: hsl(300, 26%, 99%);
+  --mauve-2: hsl(270, 20%, 98%);
+  --mauve-3: hsl(267, 13.8%, 95.3%);
+  --mauve-4: hsl(265, 12.2%, 92.7%);
+  --mauve-5: hsl(263, 11.6%, 90.3%);
+  --mauve-6: hsl(261, 11.1%, 87.7%);
+  --mauve-7: hsl(257, 10.8%, 84.3%);
+  --mauve-8: hsl(249, 10.4%, 75.5%);
+  --mauve-9: hsl(252, 6%, 57.3%);
+  --mauve-10: hsl(250, 5%, 52.3%);
+  --mauve-11: hsl(252, 5%, 40.7%);
+  --mauve-12: hsl(260, 10%, 13.5%);
+}
+
+html[data-theme='dark'] {
+  --primary-foreground: var(--ruby-1);
+  --secondary-foreground: var(--ruby-6);
+  --tertiary-foreground: var(--ruby-9);
+  --primary-background: var(--mauve-12);
+  --secondary-background: var(--mauve-11);
+  --tertiary-background: var(--mauve-10);
+}
+
+html[data-theme='light'] {
+  --primary-foreground: var(--ruby-12);
+  --secondary-foreground: var(--ruby-11);
+  --tertiary-foreground: var(--mauve-12);
+  --primary-background: var(--mauve-1);
+  --secondary-background: var(--mauve-2);
+  --tertiary-background: var(--mauve-3);
+}
+
+/* @media (prefers-color-scheme: light) {
+  html {
+    --primary-foreground: var(--ruby-12);
+    --secondary-foreground: var(--ruby-11);
+    --tertiary-foreground: var(--mauve-12);
+    --primary-background: var(--mauve-1);
+    --secondary-background: var(--mauve-2);
+    --tertiary-background: var(--mauve-3);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --primary-foreground: var(--ruby-1);
+    --secondary-foreground: var(--ruby-6);
+    --tertiary-foreground: var(--ruby-9);
+    --primary-background: var(--mauve-12);
+    --secondary-background: var(--mauve-11);
+    --tertiary-background: var(--mauve-10);
+  }
+} */

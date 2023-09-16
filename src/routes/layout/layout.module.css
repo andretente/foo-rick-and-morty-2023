@@ -1,71 +1,44 @@
-.navigation {
-  align-items: center;
-  background: rgba(34, 34, 34, 0.93);
-  backdrop-filter: blur(25px);
-  display: flex;
-  height: 60px;
-  left: 0;
-  margin: 0 var(--spacing-h-4) 0 0;
-  padding: var(--spacing-v-4) var(--spacing-h-7);
-  position: fixed;
-  transition: background 0.3s ease-in-out;
+.header {
+  background-color: var(--primary-background);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1;
 }
 
-.navigation--is-home {
-  background: #1c1c1c;
-  transition: background 0.3s ease-in-out;
+.navigation {
+  padding: var(--space-100) var(--space-200);
 }
 
 .navigation-link {
-  color: #fff;
-  border-radius: 4px;
-  padding: var(--spacing-v-2) var(--spacing-h-2);
-  margin-right: var(--spacing-h-6);
-  position: relative;
-}
-
-.navigation-link:hover {
-  color: #fff;
-}
-
-.navigation-link:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
-  transition: outline-offset 0.2s;
-}
-
-.navigation-link:last-child {
-  margin-right: 0;
+  color: var(--primary-foreground);
+  border-radius: var(--border-radius-extra-small);
+  padding: var(--space-50) var(--space-100);
 }
 
 .navigation-underline {
   animation: fade-in 0.5s ease-in forwards; /* Hack! :)*/
-  background: #9d1d2a;
+  background: var(--tertiary-foreground);
   bottom: -1px;
   height: 2px;
   left: 0;
   opacity: 0;
   position: absolute;
   right: 0;
-  transition: all 0.2s;
+  transition: all var(--duration-slow);
   z-index: 1;
+}
+
+.theme-toggle {
+  align-self: center;
+  justify-self: end;
 }
 
 .main {
   display: grid;
-  margin-top: 60px;
-  background: rgba(34, 34, 34, 0.93);
   grid-template-rows: auto 1fr;
   height: calc(100dvh - 60px);
-  transition: background 0.3s ease-in-out;
-}
-
-.main--is-home {
-  background: #1c1c1c;
-  transition: background 0.3s ease-in-out;
 }
 
 @keyframes fade-in {

@@ -1,35 +1,32 @@
 .root {
-  animation: fade-in 0.2s ease-in forwards;
-  background-color: #222322;
-  border: 1px solid #9d1d2a;
-  border-radius: 4px;
-  height: fit-content;
-  margin: 0 auto;
-  padding: var(--spacing-v-6) var(--spacing-h-8);
-  width: fit-content;
+  align-self: center;
+  animation: fade-in var(--duration-slow) var(--ease-bob) forwards;
+  background-color: var(--primary-background);
+  border: 1px solid var(--secondary-foreground);
+  border-radius: var(--border-radius-extra-small);
+  justify-self: center;
+  padding: var(--space-300);
 }
 
 .title {
-  animation: fade-in 0.1s ease-in 0.2s forwards;
-  margin: var(--spacing-v-4) var(--spacing-h-4);
+  animation: fade-in var(--duration-slow) var(--ease-bob) 0.2s forwards;
+  margin-block: var(--space-100);
   opacity: 0;
+  text-align: center;
 }
 
 .image {
-  animation: fade-in 0.1s ease-in 0.3s forwards;
-  border-radius: 4px;
+  animation: fade-in var(--duration-slow) var(--ease-bob) 0.3s forwards;
+  border-radius: var(--border-radius-extra-small);
   opacity: 0;
-  width: auto;
 }
 
 .details-list {
-  animation: fade-in 0.1s ease-in 0.4s forwards;
-  display: flex;
-  flex-direction: column;
+  animation: fade-in var(--duration-standard) var(--ease-bob) 0.4s forwards;
   list-style-type: none;
-  padding: 0;
   opacity: 0;
-  margin: var(--spacing-v-5) 0;
+  padding: 0;
+  text-align: center;
 }
 
 @keyframes fade-in {

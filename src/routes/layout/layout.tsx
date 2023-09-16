@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 
 import css from './layout.module.css'
+import ThemeToggle from './theme-toggle/theme-toggle'
 
 export default function Layout() {
   const location = useLocation()
@@ -30,9 +31,10 @@ export default function Layout() {
 
   return (
     <>
-      <header style={{ position: 'relative' }}>
+      <header className={clsx(css['header'])}>
         <nav
           className={clsx(
+            'cluster',
             css['navigation'],
             location.pathname === '/' && css['navigation--is-home']
           )}
@@ -53,6 +55,8 @@ export default function Layout() {
 
           {/* <span ref={underlineRef} className={css['navigation-underline']} /> */}
         </nav>
+
+        <ThemeToggle className={css['theme-toggle']} />
       </header>
 
       <BackgroundImage />

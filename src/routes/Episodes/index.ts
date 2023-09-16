@@ -1,6 +1,6 @@
-import Episodes from './Episodes'
-import episodesLoader from './Episodes.loader'
-import type { EpisodesProps } from './Episodes.types'
+import Episodes from './episodes'
+import episodesLoader from './episodes.loader'
+import type { EpisodesProps } from './episodes.types'
 
 export type { EpisodesProps }
 export { episodesLoader }

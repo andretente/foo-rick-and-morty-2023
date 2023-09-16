@@ -1,10 +1,10 @@
 import './episodes.css'
 
-import CardGrid, { CardGridItem } from '@components/_cards/CardGrid'
-import GenericCard from '@components/_cards/GenericCard'
+import CardGrid, { CardGridItem } from '@components/_cards/card-grid'
+import GenericCard from '@components/_cards/generic-card'
 import { Link, useLoaderData } from 'react-router-dom'
 
-import type { EpisodesTypes } from './Episodes.types'
+import type { EpisodesTypes } from './episodes.types'
 export default function Episodes() {
   // Doesn't seem like useLoaderData accepts generics so we have to cast it
   const data = useLoaderData() as EpisodesTypes

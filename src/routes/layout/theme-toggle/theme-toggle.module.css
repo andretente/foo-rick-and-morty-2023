@@ -1,0 +1,9 @@
+.theme-toggle {
+  background: none;
+  border: none;
+  border-radius: var(--border-radius-extra-small);
+  color: currentColor;
+  height: 40px;
+  width: 40px;
+  margin-inline-end: var(--space-100);
+}

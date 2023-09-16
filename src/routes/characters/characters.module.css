@@ -1,15 +1,17 @@
-.link {
-  animation: fade-in 0.2s ease-in forwards;
-  border-radius: 8px;
-  display: flex;
-  opacity: 0;
+.root {
+  --gutter: var(--space-150);
+  --grid-min-item-size: 250px;
+
+  justify-items: center;
+  list-style-type: none;
+  padding-inline: var(--space-200);
 }
 
-/* .characters__link:focus, */
-.link:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
-  transition: outline-offset 0.2s;
+.link {
+  animation: fade-in var(--duration-slow) var(--ease-bob) forwards;
+  border-radius: var(--border-radius-extra-small);
+  display: flex;
+  opacity: 0;
 }
 
 @keyframes fade-in {

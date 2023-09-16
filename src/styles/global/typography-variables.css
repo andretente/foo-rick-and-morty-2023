@@ -1,0 +1,41 @@
+:root {
+  /* Font Size */
+  --font-size-display: 6rem;
+  --font-size-headline-1: 4.5rem;
+  --font-size-headline-2: 3.5rem;
+  --font-size-headline-3: 2.5rem;
+  --font-size-headline-4: 2rem;
+  --font-size-headline-5: 1.5rem;
+  --font-size-headline-6: 1.25rem;
+  --font-size-body-1: 1.5rem;
+  --font-size-body-2: 1.125rem;
+  --font-size-body-3: 1rem;
+  --font-size-body-4: 0.875rem;
+  --font-size-body-5: 0.75rem;
+
+  /* Line Height  */
+  --line-height-display: 0.9;
+  --line-height-headline-1: 1;
+  --line-height-headline-2: 1.1;
+  --line-height-headline-3: 1.1;
+  --line-height-headline-4: 1.1;
+  --line-height-headline-5: 1.2;
+  --line-height-headline-6: 1.2;
+  --line-height-body-1: 1.5;
+  --line-height-body-2: 1.5;
+  --line-height-body-3: 1.5;
+  --line-height-body-4: 1.5;
+  --line-height-body-5: 1.5;
+
+  /* Letter Spacing */
+  --letter-spacing-headline-1: -0.09rem;
+  --letter-spacing-headline-2: -0.07rem;
+  --letter-spacing-headline-3: -0.05rem;
+  --letter-spacing-headline-4: -0.04rem;
+  --letter-spacing-headline-5: -0.015rem;
+  --letter-spacing-headline-6: -0.0125rem;
+  --letter-spacing-body-2: 0.0112rem;
+  --letter-spacing-body-3: 0.01rem;
+  --letter-spacing-body-4: 0.0088rem;
+  --letter-spacing-body-5: 0.0075rem;
+}

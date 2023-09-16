@@ -1,0 +1,15 @@
+:root {
+  --border-radius-extra-small: 6px;
+  --border-radius-small: 8px;
+  --border-radius-medium: 12px;
+  --border-radius-large: 24px;
+  --focus-visible-offset: 0.2rem;
+  --focus-visible-size: 2px;
+  --gutter: 1.25rem;
+}
+
+@media (min-width: 801px) {
+  :root {
+    --gutter: 2.25rem;
+  }
+}

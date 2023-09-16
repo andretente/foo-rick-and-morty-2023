@@ -1,0 +1,93 @@
+.auto-grid {
+  display: grid;
+  gap: var(--gutter, var(--space-125));
+  grid-template-columns: repeat(
+    var(--grid-placement, auto-fill),
+    minmax(var(--grid-min-item-size, 16rem), 1fr)
+  );
+}
+
+.center {
+  align-items: var(--center-vertical-alignment, center);
+  display: flex;
+  flex-flow: var(--cluster-flow, row) wrap;
+  justify-content: var(--center-horizontal-alignment, start);
+  max-inline-size: var(--center-max-size);
+}
+
+.cluster {
+  align-items: var(--cluster-vertical-alignment, center);
+  display: flex;
+  flex-flow: var(--cluster-flow, row) wrap;
+  gap: var(--cluster-gap, var(--space-100));
+  justify-content: var(--cluster-horizontal-alignment, start);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 75rem;
+  padding-inline: var(--container-padding, var(--space-150));
+  position: relative;
+}
+
+.full-inline-viewport {
+  margin-inline: calc(-1 * var(--layout-inline-padding));
+  padding-inline: var(--layout-inline-padding);
+}
+
+.frame {
+  --n: 16;
+  --d: 9;
+
+  align-items: center;
+  aspect-ratio: var(--n) / var(--d);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.frame > img,
+.frame > video {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.grid {
+  --_align-items: unset;
+  --_column-gap: inherit;
+  --_template-columns: 12;
+  --_template-rows: 1;
+  --_justify-items: unset;
+  --_row-gap: inherit;
+
+  align-items: var(--align-items, var(--_align-items));
+  column-gap: var(--column-gap, var(--_column-gap));
+  display: grid;
+  grid-template-columns: repeat(
+    var(--template-columns, var(--_template-columns)),
+    1fr
+  );
+  grid-template-rows: repeat(var(--template-rows, var(--_template-rows)), 1fr);
+  justify-items: var(--justify-items, var(--_justify-items));
+  row-gap: var(--row-gap, var(--_row-gap));
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--stack-space, 1em);
+}

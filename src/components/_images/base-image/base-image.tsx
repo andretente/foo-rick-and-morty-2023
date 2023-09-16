@@ -1,8 +1,7 @@
-import './base-image.css'
-
 import clsx from 'clsx'
 
-import type { BaseImageProps } from './BaseImage.types'
+import css from './base-image.module.css'
+import type { BaseImageProps } from './base-image.types'
 
 export default function BaseImage({
   alt,
@@ -13,9 +12,9 @@ export default function BaseImage({
 }: BaseImageProps) {
   if (!src)
     return (
-      <div className="base-image__no-image-wrapper" style={{ height, width }}>
+      <div className={css['no-image-wrapper']} style={{ height, width }}>
         <svg
-          className="base-image__no-image"
+          className={css['no-image']}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -37,7 +36,7 @@ export default function BaseImage({
     <img
       alt={alt}
       // loading="lazy"
-      className={clsx('base-image', className)}
+      className={clsx(css['base-image'], className)}
       height={height}
       src={src}
       width={width}

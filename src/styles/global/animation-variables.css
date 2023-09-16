@@ -1,0 +1,15 @@
+:root {
+  --ease-easy: cubic-bezier(0.4, 0, 0.4, 1);
+  --ease-expressive: cubic-bezier(0.8, 0, 0, 1);
+  --ease-enter: cubic-bezier(0, 0, 0.1, 1);
+  --ease-exit: cubic-bezier(0.9, 0, 1, 1);
+  --ease-bob: cubic-bezier(0.45, 1.45, 0.65, 1);
+  --ease-linear: cubic-bezier(0, 0, 1, 1);
+  --duration-instant: 0ms;
+  --duration-fast: 50ms;
+  --duration-quick: 100ms;
+  --duration-standard: 150ms;
+  --duration-slow: 250ms;
+  --duration-slower: 300ms;
+  --duration-slowest: 600ms;
+}
