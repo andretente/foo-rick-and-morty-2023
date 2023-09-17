@@ -9,16 +9,18 @@
 
 .navigation {
   padding: var(--space-100) var(--space-200);
+  position: relative;
 }
 
 .navigation-link {
   color: var(--primary-foreground);
   border-radius: var(--border-radius-extra-small);
-  padding: var(--space-50) var(--space-100);
+  margin-inline: var(--space-100);
+  padding-block: var(--space-50);
 }
 
 .navigation-underline {
-  animation: fade-in 0.5s ease-in forwards; /* Hack! :)*/
+  animation: fade-in var(--duration-slow) var(--ease-expressive) forwards; /* Hack! :)*/
   background: var(--tertiary-foreground);
   bottom: -1px;
   height: 2px;

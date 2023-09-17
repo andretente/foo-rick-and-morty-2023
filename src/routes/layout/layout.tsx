@@ -1,6 +1,6 @@
 import BackgroundImage from '@components/_images/background-image'
 import clsx from 'clsx'
-// import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 
 import css from './layout.module.css'
@@ -15,31 +15,24 @@ export default function Layout() {
     { to: '/episodes', label: 'Episodes' },
   ]
 
-  // const navRef = useRef<HTMLElement>(null)
-  // const underlineRef = useRef<HTMLSpanElement>(null)
+  const navRef = useRef<HTMLElement>(null)
+  const underlineRef = useRef<HTMLSpanElement>(null)
 
-  // useLayoutEffect(() => {
-  //   const activeElement = navRef.current?.querySelector('.active')
-  //   const dimensions = activeElement?.getBoundingClientRect()
+  useLayoutEffect(() => {
+    const activeElement = navRef.current?.querySelector('.active')
+    const dimensions = activeElement?.getBoundingClientRect()
 
-  //   if (underlineRef.current && dimensions) {
-  //     underlineRef.current.style.left = `${dimensions?.left}px`
-  //     underlineRef.current.style.top = `${dimensions?.bottom}px`
-  //     underlineRef.current.style.width = `${dimensions?.width}px`
-  //   }
-  // }, [location.pathname])
+    if (underlineRef.current && dimensions) {
+      underlineRef.current.style.left = `${dimensions?.left}px`
+      underlineRef.current.style.top = `${dimensions?.bottom}px`
+      underlineRef.current.style.width = `${dimensions?.width}px`
+    }
+  }, [location.pathname])
 
   return (
     <>
       <header className={clsx(css['header'])}>
-        <nav
-          className={clsx(
-            'cluster',
-            css['navigation'],
-            location.pathname === '/' && css['navigation--is-home']
-          )}
-          // ref={navRef}
-        >
+        <nav className={clsx('cluster', css['navigation'])} ref={navRef}>
           {navigationItems.map((navigationItem) => {
             return (
               <NavLink
@@ -53,7 +46,7 @@ export default function Layout() {
             )
           })}
 
-          {/* <span ref={underlineRef} className={css['navigation-underline']} /> */}
+          <span ref={underlineRef} className={css['navigation-underline']} />
         </nav>
 
         <ThemeToggle className={css['theme-toggle']} />
