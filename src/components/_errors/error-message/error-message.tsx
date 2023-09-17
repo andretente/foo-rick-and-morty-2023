@@ -1,17 +1,16 @@
-import './error-message.css'
-
-import type { ErrorMessageProps } from './ErrorMessage.types'
+import css from './error-message.module.css'
+import type { ErrorMessageProps } from './error-message.types'
 
 export default function ErrorMessage({ error }: ErrorMessageProps) {
   return (
-    <div className="error-message">
-      <h1 className="error-message__title">Sorry, something went wrong!</h1>
+    <div className={css['root']}>
+      <h1 className={css['title']}>Sorry, something went wrong!</h1>
 
       <p>{error}</p>
 
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="error-message__icon"
+        className={css['icon']}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

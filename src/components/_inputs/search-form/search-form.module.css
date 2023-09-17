@@ -1,0 +1,25 @@
+.root {
+  height: 100%;
+}
+
+.label {
+  color: var(--primary-foreground);
+  height: 100%;
+}
+
+.input {
+  border: none;
+  color: var(--primary-foreground);
+  background-color: var(--primary-background);
+  border: 1px solid var(--secondary-foreground);
+  border-radius: var(--border-radius-extra-small);
+  height: 100%;
+}
+
+.button {
+  background-color: var(--tertiary-background);
+  border: none;
+  border-radius: var(--border-radius-extra-small);
+  color: var(--primary-foreground);
+  height: 100%;
+}

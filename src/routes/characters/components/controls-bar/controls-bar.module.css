@@ -1,21 +1,16 @@
 .root {
-  animation: fade-in 0.1s ease-in 0.2s forwards;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: fit-content;
-  margin: var(--spacing-v-5);
+  --cluster-horizontal-alignment: center;
+  --cluster-gap: var(--space-150);
+
+  animation: fade-in var(--duration-slow) var(--ease-bob) 0.2s forwards;
+  height: 32px;
+  margin-block: var(--space-100);
   opacity: 0;
-  padding: 0 var(--spacing-h-7);
 }
 
-.search-form {
-  padding: 0 var(--spacing-h-7);
-}
-
-.sort-select {
-  padding: 0 var(--spacing-h-7);
-  border-left: 1px solid #9d1d2a;
+.root > *:not(:first-child) {
+  border-left: 1px solid var(--tertiary-foreground);
+  padding-inline-start: var(--space-150);
 }
 
 @keyframes fade-in {

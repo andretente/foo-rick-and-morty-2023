@@ -12,7 +12,7 @@ export default function GenericCard({
   const Component = as
 
   return (
-    <Component className={clsx('cluster', css['card'])}>
+    <Component className={clsx('cluster', css['root'])}>
       <span className={css['image-wrapper']}>
         <BaseImage
           className={css['image']}

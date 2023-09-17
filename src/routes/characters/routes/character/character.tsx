@@ -1,62 +1,47 @@
+import ErrorMessage from '@components/_errors/error-message'
 import MessageLoader from '@components/_loaders/message-loader'
 import { CharacterTypes } from '@globalTypes/rick-morty.types'
-import { useFetch } from '@hooks/use-fetch.hook'
+import useRouteGlobalData from '@hooks/use-route-global-data'
 import clsx from 'clsx'
-import { useEffect } from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
-import useGlobalState from '../../../../context/use-global-state'
 import css from './character.module.css'
 
 export default function Character() {
   const params = useParams()
-  const location = useLocation()
 
-  const { state, setState } = useGlobalState()
+  const { data, error } = useRouteGlobalData<CharacterTypes>(
+    `https://rickandmortyapi.com/api/character/${params.characterId}`
+  )
 
-  const isCached = Boolean(state[location.pathname])
+  if (error) {
+    return <ErrorMessage error={error.message} />
+  }
 
-  const { data } = useFetch<CharacterTypes>({
-    url: `https://rickandmortyapi.com/api/character/${params.characterId}`,
-    bypass: isCached,
-  })
-
-  useEffect(() => {
-    if (data && !isCached) {
-      setState((prevState) => ({
-        ...prevState,
-        [location.pathname]: data,
-      }))
-    }
-  }, [data, isCached, location.pathname, setState])
-
-  const cachedData = state[location.pathname] as CharacterTypes
-  const _data = isCached ? cachedData : data
-
-  if (!_data) {
+  if (!data) {
     return <MessageLoader />
   }
 
   return (
     <div className={css['root']}>
       <h2 className={clsx('typography-headline-4', css['title'])}>
-        {_data.name}
+        {data.name}
       </h2>
 
       <img
-        alt={`thumbnail of the character${_data.name}`}
+        alt={`thumbnail of the character${data.name}`}
         className={css['image']}
         height={300}
         width={300}
-        src={_data.image}
+        src={data.image}
       />
 
       <ul className={clsx('stack', css['details-list'])}>
-        <li>Species: {_data.species}</li>
+        <li>Species: {data.species}</li>
 
-        <li>Status: {_data.status}</li>
+        <li>Status: {data.status}</li>
 
-        <li>Origin: {_data.origin.name}</li>
+        <li>Origin: {data.origin.name}</li>
       </ul>
     </div>
   )

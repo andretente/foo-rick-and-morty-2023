@@ -8,7 +8,7 @@ import {
 import GlobalStateProvider from './context/global-state'
 import Characters from './routes/characters'
 import Character from './routes/characters/routes/character'
-// import Episodes, { episodesLoader } from './routes/Episodes'
+import Episodes, { episodesLoader } from './routes/episodes'
 import Error from './routes/error'
 import Layout from './routes/layout'
 // import StopWatch from './routes/StopWatch'
@@ -25,11 +25,11 @@ function App() {
                 <Route path=":characterId" element={<Character />} />
               </Route>
 
-              {/* <Route
-              path="episodes"
-              element={<Episodes />}
-              loader={episodesLoader}
-            /> */}
+              <Route
+                path="episodes"
+                element={<Episodes />}
+                loader={episodesLoader}
+              />
 
               {/* <Route path="stopwatch" element={<StopWatch />} /> */}
             </Route>

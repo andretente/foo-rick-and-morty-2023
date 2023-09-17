@@ -1,12 +1,11 @@
-import './search-form.css'
-
+import clsx from 'clsx'
 import { FormEvent, memo, useEffect, useRef } from 'react'
 
-import type { SearchFormProps } from './SearchForm.types'
+import css from './search-form.module.css'
+import type { SearchFormProps } from './search-form.types'
 
 // ! WARNING: This is a very contrived, memo added for demo purposes
-export default memo(function SearchForm({
-  className,
+const SearchForm = memo(function SearchForm({
   onChange,
   onSubmit,
 }: SearchFormProps) {
@@ -32,25 +31,27 @@ export default memo(function SearchForm({
 
   return (
     <form
-      className={className}
+      className={clsx('cluster', css['root'])}
       onSubmit={onSubmitHandler}
       onChange={onChangeHandler}
     >
-      <label>
-        <span className="search-form__label">Search:</span>
+      <label className={clsx('cluster', css['label'])}>
+        <span>Search:</span>
 
         <input
           ref={inputRef}
-          className="search-form__input"
+          className={css['input']}
           autoComplete="off"
           type="text"
           name="search"
         />
       </label>
 
-      <button className="search-form__button" type="submit">
+      <button className={css['button']} type="submit">
         Go!
       </button>
     </form>
   )
 })
+
+export default SearchForm

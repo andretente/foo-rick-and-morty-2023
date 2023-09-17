@@ -1,6 +1,7 @@
 import GenericCard from '@components/_cards/generic-card'
+import ErrorMessage from '@components/_errors/error-message'
 import MessageLoader from '@components/_loaders/message-loader'
-import { useFetch } from '@hooks/use-fetch.hook'
+import useRouteGlobalData from '@hooks/use-route-global-data'
 import clsx from 'clsx'
 import { Link } from 'react-router-dom'
 
@@ -8,9 +9,13 @@ import css from './characters.module.css'
 import type { CharactersTypes } from './characters.types'
 
 export default function Characters() {
-  const { data } = useFetch<CharactersTypes>({
-    url: 'https://rickandmortyapi.com/api/character',
-  })
+  const { data, error } = useRouteGlobalData<CharactersTypes>(
+    'https://rickandmortyapi.com/api/character'
+  )
+
+  if (error) {
+    return <ErrorMessage error={error.message} />
+  }
 
   if (!data) {
     return <MessageLoader />

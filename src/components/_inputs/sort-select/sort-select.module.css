@@ -1,0 +1,14 @@
+.root {
+  height: 100%;
+}
+.label {
+  margin-inline-end: var(--space-150);
+}
+
+.select {
+  border-radius: var(--border-radius-extra-small);
+  border: 1px solid var(--secondary-foreground);
+  color: var(--primary-foreground);
+  background-color: var(--primary-background);
+  height: 100%;
+}

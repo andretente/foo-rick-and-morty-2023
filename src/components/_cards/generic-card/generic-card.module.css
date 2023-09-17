@@ -1,4 +1,4 @@
-.card {
+.root {
   --cluster-gap: 0;
 
   background-color: var(--primary-background);
@@ -11,7 +11,12 @@
   width: 250px;
 }
 
-.card:hover {
+.root[data-theme='dark'] {
+  background-color: var(--mauve-1);
+  color: var(--ruby-12);
+}
+
+.root:hover {
   border-color: var(--tertiary-foreground);
   transition: border-color var(--duration-slower) var(--ease-bob);
 }
@@ -28,7 +33,7 @@
   transition: transform var(--duration-slow) var(--ease-exit);
 }
 
-.card:hover .image {
+.root:hover .image {
   transform: scale(1.05);
   transition: transform var(--duration-slower) var(--ease-bob);
 }

@@ -1,0 +1,12 @@
+.root {
+  padding: var(--space-100) var(--space-200);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-size-body-2);
+}
+
+.icon {
+  width: 50px;
+}
