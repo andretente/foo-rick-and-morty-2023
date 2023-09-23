@@ -1,10 +1,12 @@
 import clsx from 'clsx'
-import { ChangeEvent } from 'react'
+import { ChangeEvent, memo } from 'react'
 
 import css from './sort-select.module.css'
 import type { SortSelectProps } from './sort-select.types'
 
-export default function SortSelect({ onChange }: SortSelectProps) {
+const SortSelect = memo(function SortSelect({ onChange }: SortSelectProps) {
+  // console.log('👷 render sort 👷')
+
   return (
     <label className={clsx('cluster', css['root'])}>
       <span className={css['label']}>Sort:</span>
@@ -21,4 +23,6 @@ export default function SortSelect({ onChange }: SortSelectProps) {
       </select>
     </label>
   )
-}
+})
+
+export default SortSelect

@@ -18,6 +18,7 @@ export default function Episodes() {
   // ! WARNING: This is a very contrived, useCallback added for demo purposes
   const updateSearchValue = useCallback((value: string) => {
     setCurrentSearchValue(value)
+    // setSearchValue(value)
   }, [])
 
   // ! WARNING: This is a very contrived, useCallback added for demo purposes

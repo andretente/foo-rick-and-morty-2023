@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import useGlobalState from '../context/use-global-state'
@@ -17,12 +18,14 @@ export default function useRouteGlobalData<DataType>(apiUrl: string) {
     bypass: Boolean(cachedRouteData),
   })
 
-  if (data && !hasCachedRouteData) {
-    setState((prevState) => ({
-      ...prevState,
-      [location.pathname]: data,
-    }))
-  }
+  useEffect(() => {
+    if (data && !hasCachedRouteData) {
+      setState((prevState) => ({
+        ...prevState,
+        [location.pathname]: data,
+      }))
+    }
+  }, [data, hasCachedRouteData, location.pathname, setState])
 
   const _data = (hasCachedRouteData ? cachedRouteData : data) as DataType
 
