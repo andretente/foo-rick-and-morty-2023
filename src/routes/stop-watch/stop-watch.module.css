@@ -1,0 +1,10 @@
+.stop-watch {
+  --align-items: center;
+  --justify-items: center;
+  --template-columns: 1;
+  --row-gap: var(--space-200);
+}
+
+.button {
+  margin-right: var(--spacing-h-4);
+}

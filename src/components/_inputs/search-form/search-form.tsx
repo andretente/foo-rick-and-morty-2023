@@ -9,7 +9,7 @@ const SearchForm = memo(function SearchForm({
   onChange,
   onSubmit,
 }: SearchFormProps) {
-  // console.log('👷 render search 👷')
+  console.log('👷 render search 👷')
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {

@@ -30,7 +30,7 @@ export default function Episodes() {
     setSort(value as 'a-z' | 'z-a')
   }
 
-  // ! WARNING: This is a very contrived, useMemo added for demo purposes
+  // ! WARNING: This is a very contrived example, useMemo added for demo purposes
   const filteredEpisodes = useMemo(
     () =>
       data?.results.filter((episode) => {

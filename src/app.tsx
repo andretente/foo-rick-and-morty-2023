@@ -11,7 +11,7 @@ import Character from './routes/characters/routes/character'
 import Episodes, { episodesLoader } from './routes/episodes'
 import Error from './routes/error'
 import Layout from './routes/layout'
-// import StopWatch from './routes/StopWatch'
+import StopWatch from './routes/stop-watch'
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
                 loader={episodesLoader}
               />
 
-              {/* <Route path="stopwatch" element={<StopWatch />} /> */}
+              <Route path="stop-watch" element={<StopWatch />} />
             </Route>
           )
         )}

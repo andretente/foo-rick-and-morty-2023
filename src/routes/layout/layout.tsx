@@ -22,7 +22,12 @@ export default function Layout() {
     const activeElement = navRef.current?.querySelector('.active')
     const dimensions = activeElement?.getBoundingClientRect()
 
+    if (!activeElement && underlineRef.current) {
+      underlineRef.current.style.display = 'none'
+    }
+
     if (underlineRef.current && dimensions) {
+      underlineRef.current.style.display = 'initial'
       underlineRef.current.style.left = `${dimensions?.left}px`
       underlineRef.current.style.top = `${dimensions?.bottom}px`
       underlineRef.current.style.width = `${dimensions?.width}px`

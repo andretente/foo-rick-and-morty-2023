@@ -1,44 +1,37 @@
-import './stop-watch.css'
+import clsx from 'clsx'
+import { useCallback, useState } from 'react'
 
-import { useEffect, useRef, useState } from 'react'
+import CounterValue from './components/ConterValue'
+import IncreaseButton from './components/IncreaseButton'
+import IncrementSelect from './components/IncrementSelect'
+import ResetButton from './components/ResetButton'
+import css from './stop-watch.module.css'
 
 export default function StopWatch() {
-  const [seconds, setSeconds] = useState<number>(0)
-  const [isRunning, setIsRunning] = useState<boolean>(false)
+  const [counterValue, setCounterValue] = useState(0)
+  const [incrementValue, setIncrementValue] = useState(1)
 
-  const ref = useRef<ReturnType<typeof setInterval> | null>(null)
-
-  const toggleStopwatch = () => {
-    setIsRunning(!isRunning)
+  function onClickButtonHandler() {
+    setCounterValue(counterValue + incrementValue)
   }
 
-  const resetStopwatch = () => {
-    setIsRunning(false)
-    setSeconds(0)
-  }
-
-  useEffect(() => {
-    ref.current = setInterval(() => {
-      console.log('👷 Tick 👷')
-      if (isRunning) setSeconds((state) => state + 1)
-    }, 1000)
-
-    return () => {
-      if (ref.current) clearInterval(ref.current)
-    }
-  }, [isRunning])
+  const onClickReset = useCallback(() => {
+    setCounterValue(0)
+  }, [])
 
   return (
-    <div>
-      <h1>{seconds}</h1>
+    <div className={clsx('grid', css['stop-watch'])}>
+      <CounterValue value={String(counterValue)} />
 
-      <button className="stopwatch__button" onClick={toggleStopwatch}>
-        {isRunning ? 'Stop' : 'Start'}
-      </button>
+      <IncreaseButton onClick={onClickButtonHandler} />
 
-      <button className="stopwatch__button" onClick={resetStopwatch}>
-        Reset
-      </button>
+      <ResetButton onClick={onClickReset} />
+
+      <IncrementSelect
+        onChange={(event) => {
+          setIncrementValue(Number(event.currentTarget.value))
+        }}
+      />
     </div>
   )
 }
