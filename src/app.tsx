@@ -8,7 +8,7 @@ import {
 import GlobalStateProvider from './context/global-state'
 import Characters from './routes/characters'
 import Character from './routes/characters/routes/character'
-import Episodes, { episodesLoader } from './_temp/episodes'
+import Episodes, { episodesLoader } from './routes/episodes'
 import Error from './routes/error'
 import Layout from './routes/layout'
 import StopWatch from './routes/stop-watch'
