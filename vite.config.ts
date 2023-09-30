@@ -6,6 +6,7 @@ export default defineConfig({
   build: {
     outDir: 'build',
   },
+  plugins: [react()],
   resolve: {
     alias: {
       '@assets': '/src/assets',
@@ -18,5 +19,4 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  plugins: [react()],
 })

@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { useCallback, useMemo, useState } from 'react'
 import { Link, useLoaderData } from 'react-router-dom'
 
-import ControlsBar from '../characters/components/controls-bar'
+import ControlsBar from '../../routes/characters/components/controls-bar'
 import css from './episodes.module.css'
 import type { EpisodesTypes } from './episodes.types'
 
