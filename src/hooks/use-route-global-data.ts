@@ -20,10 +20,12 @@ export default function useRouteGlobalData<DataType>(apiUrl: string) {
 
   useEffect(() => {
     if (data && !hasCachedRouteData) {
-      setState((prevState) => ({
-        ...prevState,
-        [location.pathname]: data,
-      }))
+      setState((prevState) => {
+        return {
+          ...prevState,
+          [location.pathname]: data,
+        }
+      })
     }
   }, [data, hasCachedRouteData, location.pathname, setState])
 
